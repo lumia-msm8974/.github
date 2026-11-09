@@ -8,7 +8,7 @@ through BootShim and lk1st.
 
 | Phone | Codename | Status |
 |---|---|---|
-| Nokia Lumia 1520 | `bandit` | LineageOS 18.1 bring-up: builds, boot in progress |
+| Nokia Lumia 1520 | `bandit` | LineageOS 18.1 bring-up: builds, not booted yet |
 | Nokia Lumia 930 | `martini` | coming soon |
 
 ## Repositories
