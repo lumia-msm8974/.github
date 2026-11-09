@@ -9,7 +9,7 @@ through BootShim and lk1st.
 | Phone | Codename | Status |
 |---|---|---|
 | Nokia Lumia 1520 | `bandit` | LineageOS 18.1 bring-up: builds, not booted yet |
-| Nokia Lumia 930 | `martini` | coming soon |
+| Nokia Lumia 930 | `martini` | in preparation (RM-1045): kernel, lk1st and device tree build; no phone tested yet |
 
 ## Repositories
 
@@ -17,10 +17,13 @@ through BootShim and lk1st.
 |---|---|
 | [android_device_nokia_bandit](https://github.com/lumia-msm8974/android_device_nokia_bandit) | Lumia 1520 device tree, LineageOS 18.1; ROM and TWRP releases |
 | [android_vendor_nokia_bandit](https://github.com/lumia-msm8974/android_vendor_nokia_bandit) | Lumia 1520 vendor files |
-| [android_kernel_nokia_msm8974](https://github.com/lumia-msm8974/android_kernel_nokia_msm8974) | Kernel 3.4 for the MSM8974 Lumias, based on LineageOS `android_kernel_oppo_msm8974` |
-| [lk2nd](https://github.com/lumia-msm8974/lk2nd) | lk2nd with lk1st support for the Lumias (branch `bandit`) |
+| [android_device_nokia_martini](https://github.com/lumia-msm8974/android_device_nokia_martini) | Lumia 930 device tree, LineageOS 18.1 (in preparation) |
+| [android_vendor_nokia_martini](https://github.com/lumia-msm8974/android_vendor_nokia_martini) | Lumia 930 vendor files (in preparation) |
+| [android_kernel_nokia_msm8974](https://github.com/lumia-msm8974/android_kernel_nokia_msm8974) | Kernel 3.4 for the MSM8974 Lumias, based on LineageOS `android_kernel_oppo_msm8974` (branches `lineage-18.1-bandit`, `lineage-18.1-martini`) |
+| [lk2nd](https://github.com/lumia-msm8974/lk2nd) | lk2nd with lk1st support for the Lumias (branches `bandit` and `martini`) |
 | [bandit-manifests](https://github.com/lumia-msm8974/bandit-manifests) | Local manifests to build Android for the Lumia 1520 |
-| [bandit-installer](https://github.com/lumia-msm8974/bandit-installer) | Installer for Windows and Linux: partitions, boot chain, ROM |
+| [martini-manifests](https://github.com/lumia-msm8974/martini-manifests) | Local manifests to build Android for the Lumia 930 |
+| [bandit-installer](https://github.com/lumia-msm8974/bandit-installer) | Installer for Windows and Linux, Lumia 1520 and 930: partitions, boot chain, ROM |
 
 ## Credits
 
@@ -28,7 +31,9 @@ This work stands on other people's work; each repository lists what it uses in d
 
 - [LineageOS](https://github.com/LineageOS): the OnePlus One / Oppo MSM8974 device trees and kernel this port starts from.
 - KorelisLabs, [lumia-1520-mainline](https://github.com/KorelisLabs/lumia-1520-mainline): boot chain, hardware map and TrustZone findings for the 1520.
-- Markynose (Mark Buchok), [lumia930-linux](https://github.com/Markynose/lumia930-linux): SMP through the stock UEFI parking mailboxes on the MSM8974 Lumias.
+- Markynose (Mark Buchok), [lumia930-linux](https://github.com/Markynose/lumia930-linux): SMP through the stock UEFI parking mailboxes on the MSM8974 Lumias, and the Lumia 930 hardware map and BootShim → lk1st chain.
+- zh / hao (2314372037), [android_device_nokia_martini](https://github.com/2314372037/android_device_nokia_martini) and [android_kernel_nokia_martini](https://github.com/2314372037/android_kernel_nokia_martini): the first Android (LineageOS 17.1) booting on the Lumia 930; panel, speaker and vibrator wiring.
+- Mainline4Lumia (Dominduchami), [lk2nd `martini-support`](https://github.com/Mainline4Lumia/lk2nd/tree/martini-support), and Android4Lumia (J0SH1X, sonic011gamer), [android_kernel_nokia_martini](https://github.com/Android4Lumia/android_kernel_nokia_martini): Lumia 930 lk and kernel work.
 - imbushuo (Bingxing Wang), [boot-shim](https://github.com/imbushuo/boot-shim).
 - msm8916-mainline, [lk2nd](https://github.com/msm8916-mainline/lk2nd).
 - René Lergner (HeathCliff), [WPinternals](https://github.com/ReneLergner/WPinternals).
